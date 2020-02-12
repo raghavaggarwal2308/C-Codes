@@ -1,17 +1,25 @@
 #include <stdio.h>
 int main()
 {
-    int n;
+    int n,i;
     scanf("%d", &n);
     int a[n];
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     scanf("%d", &a[i]);
     int l=0, u=n-1,m;
     while(l<u)
     {
         m = (l+u)/2;
+        if(n==2)
+        {
+            if(a[l]>a[u])
+            printf("%d", u);
+            else
+            printf("%d", -1);
+            break;
+        }
         if(a[u]>=a[l])
-            printf(-1);
+            printf("-1");
         else
         {
         if(a[m]<a[m+1] && a[m]<a[m-1])
