@@ -9,7 +9,7 @@ int main()
     int l=0, u=n-1,m;
     while(l<u)
     {
-        m = (l+u)/2;
+        m = (l+u)/2;   //m is middle index
         if(n==2)
         {
             if(a[l]>a[u])
